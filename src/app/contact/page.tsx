@@ -41,8 +41,8 @@ export default function Contact() {
           <h2 className="text-xl mb-4 text-green-300">$ cat ~/.contact_info</h2>
           <div className="space-y-2 text-green-400">
             <p><span className="text-green-300">$ echo $EMAIL</span> wallscreet@proton.me</p>
-            <p><span className="text-green-300">$ echo $GITHUB</span> github.com/wallscreet</p>
-            <p><span className="text-green-300">$ echo $X</span> @wallscreet</p>
+            {/* <p><span className="text-green-300">$ echo $GITHUB</span> github.com/wallscreet</p>
+            <p><span className="text-green-300">$ echo $X</span> @wallscreet</p> */}
             <p><span className="text-green-300">$ echo $LOCATION</span> Remote, USA</p>
           </div>
         </div>
@@ -51,9 +51,9 @@ export default function Contact() {
           <div className="border border-white rounded p-6 mb-6">
             <h2 className="text-xl mb-4 text-green-400">$ ./transmission_complete.sh</h2>
             {/* <p className="text-green-400">Message received successfully.</p> */}
-            <p className="text-green-400">This is a recorded announcement, as I’m afraid we’re all out at the moment.</p>
+            <p className="text-[#FF6600]">This is a recorded announcement, as I’m afraid we’re all out at the moment.</p>
             {/* <p className="text-green-400">Response initiated. Expect reply within 24-48 hours.</p> */}
-            <p className="text-green-400">The commercial council of Magrathea thanks you for your esteemed visit but regrets that this entire function is temporarily closed for business. Thank you. If you would care to leave your name and the address of a planet where you can be contacted, kindly send an email to the address provided from your own email platform.</p>
+            <p className="text-[#FF6600]">The commercial council of Magrathea thanks you for your esteemed visit but regrets that this entire function is temporarily closed for business. Thank you. If you would care to leave your name and the address of a planet where you can be contacted, kindly send an email to the address provided from your own email platform.</p>
           </div>
         ) : (
           <div className="border border-white rounded p-6 mb-6">

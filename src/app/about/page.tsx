@@ -38,7 +38,7 @@ export default function About() {
             <div>
               <p className="text-green-300 mt-6">$ history | grep "experience"</p>
               <p className="ml-4 mt-2 grid grid-cols-1 gap-2 text-sm text-white">
-                <span>[2023] Freelance data analysis and AI Systems Programmer</span>
+                <span>[2023] Freelance Data Analyst and AI Systems Programmer</span>
                 <span>[2019] Lending Program Director - Regional Credit Union</span>
                 <span>[2014] Retail Credit and Wholesale Portfolio Manager - Regional Lender</span>
                 <span>[2004] Mortgage Banking and Originations</span>
