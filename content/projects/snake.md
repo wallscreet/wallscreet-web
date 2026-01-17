@@ -3,7 +3,7 @@ title: "Snake (Pygame)"
 date: "2025-11-29"
 description: "A classic Snake game implementation using Pygame with modern features including a persistent leaderboard system and smooth gameplay."
 repo: "pysnake"
-lang: "python"
+language: "python"
 ---
 
 ## 🐍 Snake Game

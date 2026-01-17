@@ -3,7 +3,7 @@ title: "DOD Contract Awards Scraper"
 date: "2025-07-31"
 description: "A Python-based pipeline to collect, parse, and structure U.S. Department of Defense (DoD) contract award announcements for use as model context or training data."
 repo: "dod_awards"
-lang: "python"
+language: "python"
 ---
 
 ## DoD Contract Awards Scraper & Parser (with grok-3-mini)

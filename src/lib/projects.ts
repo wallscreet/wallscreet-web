@@ -41,6 +41,8 @@ export interface ProjectData {
   date: string;
   description?: string;
   content?: string;
+  language?: string;
+  repo?: string;
 }
 
 export function getSortedProjectsData(): ProjectData[] {
@@ -147,6 +149,7 @@ export async function getProjectData(slug: string): Promise<ProjectData | null> 
       date: matterResult.data.date || '',
       description: matterResult.data.description,
       content: matterResult.content,
+      language: matterResult.language,
     };
   } catch (parseError) {
     console.error(`Error parsing post data for ${slug}:`, parseError);

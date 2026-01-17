@@ -3,7 +3,7 @@ title: "Hangman"
 date: "2025-11-30"
 description: "A classic Hangman game implemented in C++23 with a programming-themed word dictionary. Perfect for learning and entertainment!"
 repo: "hangman"
-lang: "c++"
+language: "c++"
 ---
 
 ## 🎮 Hangman - C++ Terminal Game

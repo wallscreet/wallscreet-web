@@ -3,7 +3,7 @@ title: "Federal Reserve Board Member Speeches RSS"
 date: "2025-08-02"
 description: "A lightweight Python pipeline to ingest, deduplicate, scrape, and summarize speeches, testimony, and comments published by Federal Reserve Board members. The resulting structured and summarized content is intended for use as model context, monitoring, analysis, or downstream NLP workflows—built to stay lean on cost by leveraging Grok-3-mini via the XAI API."
 repo: "frb_speeches"
-lang: "python"
+language: "python"
 ---
 
 ## Federal Reserve Board RSS

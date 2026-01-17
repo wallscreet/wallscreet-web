@@ -25,7 +25,7 @@ export default function BlogPostClient({ postData, slug }: BlogPostClientProps) 
           <div className="mb-6 text-xl text-green-400">
             <p>$ stat ./posts/<span className="text-[#FF6600]">{slug}.md</span></p>
             <div className="ml-4 mt-2 text-sm">
-              <p>Title: <span className="text-white">{postData.title}</span></p>
+              <p>Title: <span className="text-white">{postData.title}</span>"</p>
               <p>Author: <span className="text-white">{postData.author}</span></p>
               <p>Date: <span className="text-white">{new Date(postData.date).toLocaleDateString()}</span></p>
               {postData.description && <p>Description: <span className="text-white">{postData.description}</span></p>}

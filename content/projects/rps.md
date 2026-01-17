@@ -3,7 +3,7 @@ title: "Rock, Paper, Scissors"
 date: "2025-11-30"
 description: "A fun, terminal-based Rock, Paper, Scissors game written in modern C++23. Perfect for kids and adults alike! Built by a dad for his son to enjoy."
 repo: "rps"
-lang: "c++"
+language: "c++"
 ---
 
 ## Rock, Paper, Scissors - Streak Master

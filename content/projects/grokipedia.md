@@ -3,7 +3,7 @@ title: "Grokipedia Scraper"
 date: "2025-10-30"
 description: "A tiny command-line tool that searches **Grokipedia**, grabs the top article, and **saves the full text to a `.txt` file**."
 repo: "gpedia"
-lang: "python"
+language: "python"
 ---
 
 ## Grokipedia Scraper

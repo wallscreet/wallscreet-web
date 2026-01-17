@@ -3,7 +3,7 @@ title: "LLamaTran"
 date: "2025-12-02"
 description: "A minimal Fortran interface to llama.cpp using ISO_C_BINDING. If the Fortran Renaissance is real, it deserves its own 🦙 bindings."
 repo: "llamatran"
-lang: "fortran"
+language: "fortran"
 ---
 
 ## LlamaTRAN

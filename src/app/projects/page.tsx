@@ -20,7 +20,7 @@ export default function ProjectPage() {
             <div key={project.slug} className="border border-white rounded p-6 hover:bg-green-950 transition-colors">
               <div className="flex justify-between items-start mb-2">
                 <Link href={`/projects/${project.slug}`} className="text-blue-500 text-xl hover:text-green-300">
-                  {project.title}
+                  {project.title} <span className="text-white text-sm">    ({project.language})</span> 
                 </Link>
                 <span className="text-white text-sm whitespace-nowrap ml-4">
                   {new Date(project.date).toLocaleDateString()}

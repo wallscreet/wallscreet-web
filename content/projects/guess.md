@@ -3,7 +3,7 @@ title: "Number Guessing Game"
 date: "2025-11-30"
 description: "A fun and simple C++ number guessing game that's perfect for kids and adults alike! This project includes three different versions of the classic guessing game, each with unique features."
 repo: "guess"
-lang: "c++"
+language: "c++"
 ---
 
 ## Number Guessing Game

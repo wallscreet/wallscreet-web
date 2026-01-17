@@ -3,7 +3,7 @@ title: "Watcher"
 date: "2024-08-04"
 description: "Watcher is a lightweight Python package designed for developers who prefer hot-reloading files from the terminal."
 repo: "watcher"
-lang: "python"
+language: "python"
 ---
 
 ## Watcher

@@ -3,7 +3,7 @@ title: "Tiny Mamba"
 date: "2025-11-02"
 description: "TinyMamba is a minimal, educational implementation of a hybrid language model architecture combining state-space modeling (SSM) and transformer attention. It is designed for clarity, extensibility, and experimentation with memory-based reasoning and context-dependent computation."
 repo: "tinymamba"
-lang: "python"
+language: "python"
 ---
 
 ## TinyMamba

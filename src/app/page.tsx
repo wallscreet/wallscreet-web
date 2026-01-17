@@ -5,12 +5,20 @@ export default function Home() {
     <div className="min-h-screen bg-black text-green-500 font-mono p-8">
       <div className="max-w-4xl mx-auto">
         <Navigation />
-        <pre className="text-center mb-8 text-2sm leading-tight">
+        <pre className="hidden md:block text-center mb-8 text-2sm leading-tight">
 {`
 ▄█▀▀▀▀█ ██     ██  ▄▄▄  ▄▄    ▄▄     ▄▄▄▄  ▄▄▄▄ ▄▄▄▄  ▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄▄ 
 █  █▀▄  ██ ▄█▄ ██ ██▀██ ██    ██    ███▄▄ ██▀▀▀ ██▄█▄ ██▄▄  ██▄▄    ██   
 █▄ ▀▀ █  ▀██▀██▀  ██▀██ ██▄▄▄ ██▄▄▄ ▄▄██▀ ▀████ ██ ██ ██▄▄▄ ██▄▄▄   ██   
  ▀▀▀▀▀                                                                   
+`}
+        </pre>
+        <pre className="md:hidden text-center mb-8 text-2sm leading-tight">
+{`
+▄█▀▀▀▀█ ██     ██ 
+█  █▀▄  ██ ▄█▄ ██ 
+█▄ ▀▀ █  ▀██▀██▀  
+ ▀▀▀▀▀            
 `}
         </pre>
         
@@ -22,16 +30,18 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <a href="/projects" className="md:col-span-3 block border border-[#FF6600] rounded p-6 hover:bg-green-950 transition-colors">
+            <h2 className="text-lg mb-2 font-bold text-green-300">$ cd ./projects</h2>
+            <p className="text-green-400">Explore my projects spanning multiple domains and languages.</p>
+          </a>
           <a href="/about" className="block border border-white rounded p-6 hover:bg-green-950 transition-colors">
             <h2 className="text-lg mb-2 font-bold text-green-300">$ cd ./about</h2>
             <p className="text-green-500">Learn more about me and my journey</p>
           </a>
-          
           <a href="/blog" className="block border border-white rounded p-6 hover:bg-green-950 transition-colors">
             <h2 className="text-lg mb-2 font-bold text-green-300">$ cd ./posts</h2>
             <p className="text-green-400">Browse my latest blog posts and thoughts</p>
           </a>
-          
           <a href="/contact" className="block border border-white rounded p-6 hover:bg-green-950 transition-colors">
             <h2 className="text-lg mb-2 font-bold text-green-300">$ cd ./contact</h2>
             <p className="text-green-400">Get in touch and start a conversation</p>

@@ -3,7 +3,7 @@ title: "US Debt to the Penny"
 date: "2025-07-31"
 description: "Fetches and displays the latest official **United States public debt data** from TreasuryDirect’s “Debt to the Penny” RSS feed. It provides a clear day-over-day summary, including the change in debt held by the public, intragovernmental holdings, and total public debt outstanding."
 repo: "us_debt"
-lang: "python"
+language: "python"
 ---
 
 ## 💸 US Debt to the Penny - RSS Summary Tool
