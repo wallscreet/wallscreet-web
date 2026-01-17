@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-/* Optional: Customize prose to fit your green terminal theme */
 @theme {
   --color-prose-body: theme("colors.green.400 / 90%");
   --color-prose-headings: theme("colors.green.300");
@@ -10,11 +9,9 @@
   --color-prose-pre-code: theme("colors.green.100");
   --color-prose-links: theme("colors.green.500");
   --color-prose-links-hover: theme("colors.green.300");
-  --prose-font-sans: theme("fontFamily.mono"); /* or your monospace font */
+  --prose-font-sans: theme("fontFamily.mono");
 }
 
-/* @tailwind base; */
-@tailwind utilities;
 @tailwind utilities;
 
 :root {

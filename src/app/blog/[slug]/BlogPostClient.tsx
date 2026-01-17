@@ -6,7 +6,7 @@ import { PostData } from '@/lib/posts';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import rehypeHighlight from 'rehype-highlight';
-import 'highlight.js/styles/github-dark-dimmed.css'; // or 'monokai-sublime.css' for more terminal-like
+import 'highlight.js/styles/github-dark-dimmed.css';
 
 interface BlogPostClientProps {
   postData: PostData;
@@ -21,14 +21,13 @@ export default function BlogPostClient({ postData, slug }: BlogPostClientProps) 
 
         {/* Post metadata in terminal style */}
         <div className="border border-green-500 rounded p-6 mb-6">
-          <h1 className="text-3xl mb-4">$ cat ./posts/{slug}.md</h1>
           
-          <div className="mb-6 text-green-400 text-sm">
-            <p>$ stat ./posts/{slug}.md</p>
-            <div className="ml-4 mt-2">
-              <p>Title: {postData.title}</p>
-              <p>Date: {new Date(postData.date).toLocaleDateString()}</p>
-              {postData.description && <p>Description: {postData.description}</p>}
+          <div className="mb-6 text-xl text-green-400">
+            <p>$ stat ./posts/<span className="text-[#FF6600]">{slug}.md</span></p>
+            <div className="ml-4 mt-2 text-sm">
+              <p>Title: <span className="text-white">{postData.title}</span></p>
+              <p>Date: <span className="text-white">{new Date(postData.date).toLocaleDateString()}</span></p>
+              {postData.description && <p>Description: <span className="text-white">{postData.description}</span></p>}
             </div>
           </div>
         </div>
@@ -46,7 +45,7 @@ export default function BlogPostClient({ postData, slug }: BlogPostClientProps) 
                 h2: ({ node, ...props }) => (
                   <h2 className="text-2xl font-bold mt-6 mb-3 text-green-300" {...props} />
                 ),
-                code({ node, inline, className, children, ...props }: any) {  // ← 'any' here silences the strict check
+                code({ node, inline, className, children, ...props }: any) {
                   return inline ? (
                     <code className="bg-gray-900/80 text-green-200 px-1 rounded font-mono" {...props}>
                       {children}
@@ -72,19 +71,19 @@ export default function BlogPostClient({ postData, slug }: BlogPostClientProps) 
 
         {/* Back / related section */}
         <div className="border border-green-500 rounded p-6 mb-6">
-          <h2 className="text-xl mb-4">$ grep -r "related" ./posts/</h2>
+          <h2 className="text-xl mb-2">$ grep -r "related" ./posts/</h2>
           <p className="text-green-400">Finding related posts...</p>
           <div className="text-sm mt-2">
-            <p className="text-green-300">$ cd .. && ./blog.sh</p>
-            <Link href="/blog" className="text-green-500 hover:text-green-300 ml-4">
+            <p className="text-green-300 mb-6">$ cd .. && ./blog.sh</p>
+            <Link href="/blog" className="text-blue-500 hover:text-green-300">
               ← Back to all posts
             </Link>
           </div>
         </div>
 
         <div className="text-center mt-8">
-          <a href="/" className="inline-block border border-green-500 rounded px-6 py-3 hover:bg-green-950 transition-colors">
-            $ cd /home && ./home.sh
+          <a href="/" className="inline-block border border-blue-500 text-blue-500 rounded px-6 py-3 hover:bg-green-950 transition-colors">
+            $ cd /home
           </a>
         </div>
       </div>

@@ -23,37 +23,21 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <a href="/about" className="block border border-white rounded p-6 hover:bg-green-950 transition-colors">
-            <h2 className="text-xl mb-2">$ ./about</h2>
+            <h2 className="text-lg mb-2 font-bold text-green-300">$ cd ./about</h2>
             <p className="text-green-500">Learn more about me and my journey</p>
           </a>
           
           <a href="/blog" className="block border border-white rounded p-6 hover:bg-green-950 transition-colors">
-            <h2 className="text-xl mb-2">$ ./posts</h2>
+            <h2 className="text-lg mb-2 font-bold text-green-300">$ cd ./posts</h2>
             <p className="text-green-400">Browse my latest blog posts and thoughts</p>
           </a>
           
           <a href="/contact" className="block border border-white rounded p-6 hover:bg-green-950 transition-colors">
-            <h2 className="text-xl mb-2">$ ./contact</h2>
+            <h2 className="text-lg mb-2 font-bold text-green-300">$ cd ./contact</h2>
             <p className="text-green-400">Get in touch and start a conversation</p>
           </a>
         </div>
 
-        {/* <div className="flex flex-col items-center">
-          <div className="mt-6">
-            <iframe
-              src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2363336"
-              className="block"
-              style={{ border: 'none' }}
-              title="TryHackMe Profile Badge"
-              sandbox="allow-scripts allow-same-origin"
-              loading="lazy"
-            />
-          </div>
-
-          <div className="text-center text-green-400">
-            <p className="text-sm">$ echo "Last updated: $(date)"</p>
-          </div>
-        </div> */}
         <div className="grid grid-cols-3 place-items-center mt-6">
           {/* Row 1: Badge */}
           <iframe

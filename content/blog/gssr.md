@@ -135,7 +135,7 @@ Each of these could yield a new way to connect predictive learning, reasoning, a
 ## **9. Discussion**
 
 The GSSR idea pushes neural networks closer to systems that can **act within their own model of the world**, rather than just fitting observed data.  
-It emphasizes _internal agency_ — a model that doesn’t wait for the next input, but proactively seeks to improve its understanding or reach its goals.
+It emphasizes _internal agency_ to create a model that doesn’t wait for the next input, but proactively seeks to improve its understanding or reach its goals.
 
 This may be particularly valuable for real-world business and operational systems, where environments change, data streams evolve, and purely reactive models struggle to stay aligned with strategic objectives.
 

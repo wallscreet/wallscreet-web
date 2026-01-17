@@ -19,41 +19,41 @@ export default function Navigation() {
         
         <Link 
           href="/" 
-          className={`hover:text-green-300 ${isActive('/') && pathname === '/' ? 'text-green-300' : ''}`}
+          className={`hover:text-green-300 ${isActive('/') && pathname === '/' ? 'text-[#FF6600]' : ''}`}
         >
-          /home
+          home
         </Link>
         
-        <span className="text-green-500">&gt;</span>
+        <span className="text-green-500">&#124;</span>
         
         <Link 
           href="/about" 
-          className={`hover:text-green-300 ${isActive('/about') ? 'text-green-300' : ''}`}
+          className={`hover:text-green-300 ${isActive('/about') ? 'text-[#FF6600]' : ''}`}
         >
           about
         </Link>
         
-        <span className="text-green-500">&gt;</span>
+        <span className="text-green-500">&#124;</span>
         
         <Link 
           href="/blog" 
-          className={`hover:text-green-300 ${isActive('/blog') ? 'text-green-300' : ''}`}
+          className={`hover:text-green-300 ${isActive('/blog') ? 'text-[#FF6600]' : ''}`}
         >
           blog
         </Link>
         
-        <span className="text-green-500">&gt;</span>
+        <span className="text-green-500">&#124;</span>
         
         <Link 
           href="/contact" 
-          className={`hover:text-green-300 ${isActive('/contact') ? 'text-green-300' : ''}`}
+          className={`hover:text-green-300 ${isActive('/contact') ? 'text-[#FF6600]' : ''}`}
         >
           contact
         </Link>
         
-        <span className="text-green-500">&gt;</span>
+        <span className="text-green-500">-&gt;</span>
         
-        <span className="text-green-400">
+        <span className="text-white">
           {pathname === '/' ? '~' : pathname.split('/').slice(1).join('/')}
         </span>
       </div>

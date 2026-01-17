@@ -43,10 +43,10 @@ export default function BlogPage() {
 
         <div className="mt-12 border border-white rounded p-6">
           <h2 className="text-xl mb-4">$ ./stats.sh</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 text-sm">
             <div>
               <p className="text-green-300">Total posts:</p>
-              <p className="text-2xl ml-4">{posts.length}</p>
+              <p className="text-[#FF6600] text-2xl ml-10">{posts.length}</p>
             </div>
             <div>
               <p className="text-green-300">Latest post:</p>
@@ -54,7 +54,7 @@ export default function BlogPage() {
             </div>
             <div>
               <p className="text-green-300">System status:</p>
-              <p className="ml-4 text-green-400">All systems operational</p>
+              <p className="ml-4 text-white">All systems operational</p>
             </div>
           </div>
         </div>
