@@ -13,7 +13,7 @@ interface ProjectPostClientProps {
   slug: string;
 }
 
-export default function BlogPostClient({ projectData, slug }: ProjectPostClientProps) {
+export default function ProjectPostClient({ projectData, slug }: ProjectPostClientProps) {
   return (
     <div className="min-h-screen bg-black text-green-500 font-mono p-8">
       <div className="max-w-4xl mx-auto">

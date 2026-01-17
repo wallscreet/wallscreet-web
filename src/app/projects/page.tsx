@@ -45,11 +45,11 @@ export default function ProjectPage() {
           <h2 className="text-xl mb-4">$ ./stats.sh</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 text-sm">
             <div>
-              <p className="text-green-300">Total posts:</p>
+              <p className="text-green-300">Total projects:</p>
               <p className="text-[#FF6600] text-2xl ml-10">{projects.length}</p>
             </div>
             <div>
-              <p className="text-green-300">Latest post:</p>
+              <p className="text-green-300">Latest project:</p>
               <p className="ml-4">{projects[0]?.title || 'None'}</p>
             </div>
             <div>

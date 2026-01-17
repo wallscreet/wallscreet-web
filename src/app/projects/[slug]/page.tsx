@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
-export default async function BlogPost({ params }: PageProps) {
+export default async function ProjectPost({ params }: PageProps) {
   const { slug } = await params;
   const postData = await getProjectData(slug);
 

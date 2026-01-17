@@ -1,4 +1,11 @@
-# Personal Portfolio & Blog
+---
+title: "Personal Portfolio & Blog (this website)"
+date: "2026-01-17"
+description: "A terminal-themed Next.js portfolio and blog showcasing projects, thoughts, and technical explorations in AI research, data analysis, and systems development."
+language: "typescript | Next.js"
+---
+
+## Personal Portfolio & Blog
 
 > A terminal-themed Next.js portfolio and blog showcasing projects, thoughts, and technical explorations in AI research, data analysis, and systems development.
 
