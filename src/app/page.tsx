@@ -38,9 +38,41 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="mt-12 text-center text-green-400">
-          <p className="text-sm">$ echo "Last updated: $(date)"</p>
+        {/* <div className="flex flex-col items-center">
+          <div className="mt-6">
+            <iframe
+              src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2363336"
+              className="block"
+              style={{ border: 'none' }}
+              title="TryHackMe Profile Badge"
+              sandbox="allow-scripts allow-same-origin"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="text-center text-green-400">
+            <p className="text-sm">$ echo "Last updated: $(date)"</p>
+          </div>
+        </div> */}
+        <div className="grid grid-cols-3 place-items-center mt-6">
+          {/* Row 1: Badge */}
+          <iframe
+            src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2363336"
+            className="col-span-3"
+            style={{ border: 'none', width: '330px', height: '100px' }}
+            title="TryHackMe Profile Badge"
+            sandbox="allow-scripts allow-same-origin"
+            loading="lazy"
+          />
+
+          {/* Row 2: Last updated */}
+          <p className="text-sm col-2 text-green-400 text-center">
+            $ echo "Last updated: $(date)"
+          </p>
         </div>
+
+
+        
       </div>
     </div>
   );

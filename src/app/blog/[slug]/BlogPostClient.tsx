@@ -3,6 +3,10 @@
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import { PostData } from '@/lib/posts';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/github-dark-dimmed.css'; // or 'monokai-sublime.css' for more terminal-like
 
 interface BlogPostClientProps {
   postData: PostData;
@@ -15,6 +19,7 @@ export default function BlogPostClient({ postData, slug }: BlogPostClientProps) 
       <div className="max-w-4xl mx-auto">
         <Navigation />
 
+        {/* Post metadata in terminal style */}
         <div className="border border-green-500 rounded p-6 mb-6">
           <h1 className="text-3xl mb-4">$ cat ./posts/{slug}.md</h1>
           
@@ -28,17 +33,44 @@ export default function BlogPostClient({ postData, slug }: BlogPostClientProps) 
           </div>
         </div>
 
+        {/* Rendered Markdown – prose handles beautiful typography */}
         <div className="border border-green-500 rounded p-6 mb-6">
-          <div className="prose prose-invert max-w-none">
-            <div 
-              className="markdown-content"
-              dangerouslySetInnerHTML={{ 
-                __html: (postData.content || '').replace(/\n/g, '<br />')
+          <div className="prose prose-invert prose-green max-w-none">
+            <ReactMarkdown
+              rehypePlugins={[rehypeRaw, rehypeHighlight]}
+              // Optional: Override specific elements for extra terminal flair
+              components={{
+                h1: ({ node, ...props }) => (
+                  <h1 className="text-3xl font-bold mt-8 mb-4 text-green-300 border-b border-green-700 pb-2" {...props} />
+                ),
+                h2: ({ node, ...props }) => (
+                  <h2 className="text-2xl font-bold mt-6 mb-3 text-green-300" {...props} />
+                ),
+                code({ node, inline, className, children, ...props }: any) {  // ← 'any' here silences the strict check
+                  return inline ? (
+                    <code className="bg-gray-900/80 text-green-200 px-1 rounded font-mono" {...props}>
+                      {children}
+                    </code>
+                  ) : (
+                    <code className={className} {...props}>
+                      {children}
+                    </code>
+                  );
+                },
+                pre: ({ node, ...props }) => (
+                  <pre className="bg-gray-950 border border-green-800 p-4 rounded overflow-x-auto" {...props} />
+                ),
+                blockquote: ({ node, ...props }) => (
+                  <blockquote className="border-l-4 border-green-600 pl-4 italic text-green-400 my-6" {...props} />
+                ),
               }}
-            />
+            >
+              {postData.content || ''}
+            </ReactMarkdown>
           </div>
         </div>
 
+        {/* Back / related section */}
         <div className="border border-green-500 rounded p-6 mb-6">
           <h2 className="text-xl mb-4">$ grep -r "related" ./posts/</h2>
           <p className="text-green-400">Finding related posts...</p>
@@ -56,75 +88,6 @@ export default function BlogPostClient({ postData, slug }: BlogPostClientProps) 
           </a>
         </div>
       </div>
-
-      <style jsx>{`
-        .markdown-content {
-          line-height: 1.6;
-        }
-        
-        .markdown-content h1 {
-          font-size: 1.5rem;
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
-          color: #00ff00;
-        }
-        
-        .markdown-content h2 {
-          font-size: 1.25rem;
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
-          color: #00ff00;
-        }
-        
-        .markdown-content h3 {
-          font-size: 1.1rem;
-          margin-top: 1rem;
-          margin-bottom: 0.5rem;
-          color: #00ff00;
-        }
-        
-        .markdown-content p {
-          margin-bottom: 1rem;
-        }
-        
-        .markdown-content ul, .markdown-content ol {
-          margin-bottom: 1rem;
-          padding-left: 2rem;
-        }
-        
-        .markdown-content li {
-          margin-bottom: 0.5rem;
-        }
-        
-        .markdown-content code {
-          background: rgba(0, 255, 0, 0.1);
-          padding: 0.125rem 0.25rem;
-          border: 1px solid #00cc00;
-          border-radius: 0.125rem;
-        }
-        
-        .markdown-content pre {
-          background: rgba(0, 255, 0, 0.05);
-          border: 1px solid #00cc00;
-          padding: 1rem;
-          overflow-x: auto;
-          margin-bottom: 1rem;
-        }
-        
-        .markdown-content pre code {
-          background: none;
-          padding: 0;
-          border: none;
-        }
-        
-        .markdown-content blockquote {
-          border-left: 2px solid #00ff00;
-          padding-left: 1rem;
-          margin-left: 0;
-          font-style: italic;
-          color: #00cc00;
-        }
-      `}</style>
     </div>
   );
 }

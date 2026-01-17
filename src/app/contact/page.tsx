@@ -34,7 +34,7 @@ export default function Contact() {
         <div className="border border-white rounded p-6 mb-6">
           <h1 className="text-2xl mb-4 text-green-300">$ ./contact.sh</h1>
           <p className="text-green-400">Establishing secure connection...</p>
-          <p className="text-green-400 mb-4">Connection established. Ready to transmit.</p>
+          <p className="tet-green-400 mb-4">Connection established. Ready to transmit.</p>
         </div>
 
         <div className="border border-white rounded p-6 mb-6">
@@ -126,15 +126,22 @@ export default function Contact() {
             <p>
               <span className="text-green-300">$ curl </span>
               <a href="https://github.com/wallscreet" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-green-300">
-                https://github.com/wallscreet
+                Github
               </a>
             </p>
             <p>
               <span className="text-green-300">$ curl </span>
               <a href="https://x.com/wallscreet" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-green-300">
-                https://x.com/wallscreet
+                X.com
               </a>
             </p>
+            <p>
+              <span className="text-green-300">$ curl </span>
+              <a href="https://tryhackme.com/p/wallscr33t" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-green-300">
+                TryHackMe
+              </a>
+            </p>
+
           </div>
         </div>
 
