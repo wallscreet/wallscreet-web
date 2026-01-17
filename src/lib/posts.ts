@@ -40,6 +40,7 @@ export interface PostData {
   title: string;
   date: string;
   description?: string;
+  author: string;
   content?: string;
 }
 
@@ -146,6 +147,7 @@ export async function getPostData(slug: string): Promise<PostData | null> {
       title: matterResult.data.title || '',
       date: matterResult.data.date || '',
       description: matterResult.data.description,
+      author: matterResult.data.author,
       content: matterResult.content,
     };
   } catch (parseError) {

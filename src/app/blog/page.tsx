@@ -34,7 +34,7 @@ export default function BlogPage() {
               <div className="text-sm">
                 <span className="text-green-300">$ cat </span>
                 <Link href={`/blog/${post.slug}`} className="text-blue-500 hover:text-green-300">
-                  ./posts/{post.slug}.md
+                  ./posts/{post.slug}.md  |  {post.author}
                 </Link>
               </div>
             </div>

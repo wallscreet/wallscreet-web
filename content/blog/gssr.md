@@ -2,6 +2,7 @@
 title: "Goal Conditioned State Space Reasoner (GSSR)"
 date: "2025-10-13"
 description: "GSSR is a conceptual framework that blends ideas from state-space modeling, control theory, reinforcement learning and active inference to create a system that doesn't just predict the future, it steers it's own internal model of it."
+author: "@wallscreet"
 ---
 
 ## **Goal-Conditioned State Space Reasoner (GSSR)**

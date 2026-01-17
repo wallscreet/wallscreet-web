@@ -3,6 +3,7 @@ title: "Juliet-CLI"
 date: "2026-01-03"
 description: "Juliet is a modular AI framework where independent isomorphic agents develop persistent, personalized intelligence via swappable adapters that inject structured, tagged context into a standardized prompt pipeline enabling plug-and-play, divergent learning without rigid orchestration."
 repo: "juliet-cli"
+lang: "python"
 ---
 
 ## Juliet Framework and CLI
