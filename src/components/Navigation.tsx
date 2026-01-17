@@ -43,6 +43,15 @@ export default function Navigation() {
         </Link>
         
         <span className="text-green-500">&#124;</span>
+
+        <Link 
+          href="/projects" 
+          className={`hover:text-green-300 ${isActive('/projects') ? 'text-[#FF6600]' : ''}`}
+        >
+          projects
+        </Link>
+        
+        <span className="text-green-500">&#124;</span>
         
         <Link 
           href="/contact" 

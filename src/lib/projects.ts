@@ -2,11 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
-const postsDirectory = path.join(process.cwd(), 'content/projects');
+const projectsDirectory = path.join(process.cwd(), 'content/projects');
 
 function ensureDirectoryExists(): boolean {
   try {
-    return fs.existsSync(postsDirectory) && fs.statSync(postsDirectory).isDirectory();
+    return fs.existsSync(projectsDirectory) && fs.statSync(projectsDirectory).isDirectory();
   } catch (error) {
     console.error('Error checking posts directory:', error);
     return false;
@@ -26,7 +26,7 @@ function safeReadFile(filePath: string): { content: string; error: string | null
 
 function safeReadDirectory(): { files: string[]; error: string | null } {
   try {
-    const files = fs.readdirSync(postsDirectory);
+    const files = fs.readdirSync(projectsDirectory);
     return { files, error: null };
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : 'Unknown error';
@@ -35,7 +35,7 @@ function safeReadDirectory(): { files: string[]; error: string | null } {
   }
 }
 
-export interface PostData {
+export interface ProjectData {
   slug: string;
   title: string;
   date: string;
@@ -43,9 +43,9 @@ export interface PostData {
   content?: string;
 }
 
-export function getSortedPostsData(): PostData[] {
+export function getSortedProjectsData(): ProjectData[] {
   if (!ensureDirectoryExists()) {
-    console.warn('Posts directory does not exist:', postsDirectory);
+    console.warn('Posts directory does not exist:', projectsDirectory);
     return [];
   }
 
@@ -54,7 +54,7 @@ export function getSortedPostsData(): PostData[] {
     return [];
   }
 
-  const allPostsData: PostData[] = [];
+  const allPostsData: ProjectData[] = [];
   
   for (const fileName of fileNames) {
     if (!fileName.endsWith('.md')) {
@@ -65,7 +65,7 @@ export function getSortedPostsData(): PostData[] {
     const slug = fileName.replace(/\.md$/, '');
 
     // Read markdown file as string
-    const fullPath = path.join(postsDirectory, fileName);
+    const fullPath = path.join(projectsDirectory, fileName);
     const { content: fileContents, error: fileError } = safeReadFile(fullPath);
     
     if (fileError) {
@@ -80,7 +80,7 @@ export function getSortedPostsData(): PostData[] {
       const postData = {
         slug,
         ...matterResult.data,
-      } as PostData;
+      } as ProjectData;
 
       // Only include posts with valid data
       if (postData.title && postData.date) {
@@ -103,7 +103,7 @@ export function getSortedPostsData(): PostData[] {
   });
 }
 
-export function getAllPostSlugs() {
+export function getAllProjectSlugs() {
   if (!ensureDirectoryExists()) {
     return [];
   }
@@ -124,12 +124,12 @@ export function getAllPostSlugs() {
     });
 }
 
-export async function getPostData(slug: string): Promise<PostData | null> {
+export async function getProjectData(slug: string): Promise<ProjectData | null> {
   if (!ensureDirectoryExists()) {
     return null;
   }
 
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
+  const fullPath = path.join(projectsDirectory, `${slug}.md`);
   const { content: fileContents, error } = safeReadFile(fullPath);
   
   if (error) {
