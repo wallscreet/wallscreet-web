@@ -110,4 +110,4 @@ Juliet includes a terminal-based interface designed to make agent evolution obse
 * ChromaDB-backed vector memory
 * YAML-driven instructions, configuration, and history
 
-![alt text](/project-images/framework.png)
+![Framework Graph](/project-images/framework.png)
