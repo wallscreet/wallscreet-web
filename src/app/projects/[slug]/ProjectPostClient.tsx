@@ -22,12 +22,13 @@ export default function ProjectPostClient({ projectData, slug }: ProjectPostClie
         {/* Post metadata in terminal style */}
         <div className="border border-green-500 rounded p-6 mb-6">
           
-          <div className="mb-6 text-xl text-green-400">
+          <div className="mb-1 text-xl text-green-400">
             <p>$ stat ./projects/<span className="text-[#FF6600]">{slug}.md</span></p>
-            <div className="ml-4 mt-2 text-sm">
-              <p>Title: <span className="text-white">{projectData.title}</span></p>
-              <p>Date: <span className="text-white">{new Date(projectData.date).toLocaleDateString()}</span></p>
-              {projectData.description && <p>Description: <span className="text-white">{projectData.description}</span></p>}
+            <div className="ml-4 mt-2">
+              <p className="text-sm mt-1">Title: <span className="text-white">{projectData.title}</span></p>
+              <p className="text-sm mt-1">Date: <span className="text-white">{new Date(projectData.date).toLocaleDateString()}</span></p>
+              <p className="text-sm mt-1 mb-2">Description: <span className="text-white">{projectData.description}</span></p>
+              <Link href={`https://www.github.com/wallscreet/${projectData.repo}`} className="text-blue-500">Open on GitHub</Link>
             </div>
           </div>
         </div>

@@ -150,6 +150,7 @@ export async function getProjectData(slug: string): Promise<ProjectData | null> 
       description: matterResult.data.description,
       content: matterResult.content,
       language: matterResult.language,
+      repo: matterResult.data.repo,
     };
   } catch (parseError) {
     console.error(`Error parsing post data for ${slug}:`, parseError);

@@ -2,8 +2,8 @@
 title: "DiscoRover.com"
 date: "2025-08-26"
 description: "A comprehensive financial data visualization platform that provides insights into U.S. economic indicators, commodity prices, inflation trends, and housing market metrics. Built with Next.js and powered by Federal Reserve Economic Data (FRED) API integration."
-repo: "discorover"
 language: "typescript | Next.js"
+repo: "discorover"
 ---
 
 ## Discorover

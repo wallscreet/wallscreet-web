@@ -3,6 +3,7 @@ title: "US Govt RSS Feeds Aggregator"
 date: "2025-08-20"
 description: "A comprehensive government data aggregation platform that simplifies access to official information from multiple U.S. government agencies and institutions. Deployed at: **[gov-feeds.discorover.com](https://gov-feeds.discorover.com)**"
 language: "typescript | Next.js"
+repo: gov-feeds
 ---
 
 ## Gov Feeds

@@ -30,12 +30,18 @@ export default function ProjectPage() {
               {project.description && (
                 <p className="text-white mb-3">{project.description}</p>
               )}
-              
-              <div className="text-sm">
-                <span className="text-green-300">$ cat </span>
-                <Link href={`/projects/${project.slug}`} className="text-blue-500 hover:text-green-300">
-                  ./projects/{project.slug}.md
-                </Link>
+              <div className="grid grid-cols-4">
+                <div className="text-sm col-span-3">
+                  <span className="text-green-300">$ cat </span>
+                  <Link href={`/projects/${project.slug}`} className="text-blue-500 hover:text-green-300">
+                    ./projects/{project.slug}.md
+                  </Link>
+                </div>
+                <div className="col-start-4 text-right">
+                  <Link href={`https://www.github.com/wallscreet/${project.repo}`}>
+                  GitHub
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
