@@ -109,8 +109,7 @@ export default function Contact() {
         )}
 
         <div className="border border-white rounded p-6 mb-6">
-          <h2 className="text-xl mb-4 text-green-300">$ cat ~/response_time.txt</h2>
-          <p className="text-green-400 mb-2">Current response time: 24-48 hours</p>
+          <h2 className="text-xl mb-4 text-green-300">$ cat ~/preferred.txt</h2>
           <p className="text-green-400 mb-2">Preferred topics:</p>
           <ul className="ml-4 text-green-400 space-y-1">
             <li>• Data Analysis Projects</li>
@@ -134,12 +133,6 @@ export default function Contact() {
               <span className="text-green-300">$ curl </span>
               <a href="https://x.com/wallscreet" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-green-300">
                 X.com
-              </a>
-            </p>
-            <p>
-              <span className="text-green-300">$ curl </span>
-              <a href="https://tryhackme.com/p/wallscr33t" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-green-300">
-                TryHackMe
               </a>
             </p>
 

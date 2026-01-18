@@ -18,7 +18,7 @@ export default function About() {
               <p className="text-green-300 mt-6">$ cat ~/.description</p>
               <p className="ml-4 whitespace-pre-line">
 {
-`Freelance full-stack with a focus on AI systems integrations and business intelligence. I write custom context tools and agentic systems.
+`Freelance full-stack with a focus on AI systems integrations and business intelligence. I have experience writing custom context tools and developing agentic systems.
 `}
               </p>
             </div>
@@ -80,8 +80,19 @@ export default function About() {
 `}
           </p>
         </div>
+        
+        <div className="place-items-center">
+          <iframe
+              src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=2363336"
+              className="col-span-3"
+              style={{ border: 'none', width: '330px', height: '100px' }}
+              title="TryHackMe Profile Badge"
+              sandbox="allow-scripts allow-same-origin"
+              loading="lazy"
+              />
+        </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-3">
           <a href="/" className="inline-block text-blue-500 border border-blue-500 rounded px-6 py-3 hover:bg-green-950 transition-colors">
             $ cd /home
           </a>

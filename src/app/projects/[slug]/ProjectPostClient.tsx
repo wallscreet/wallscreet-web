@@ -28,7 +28,7 @@ export default function ProjectPostClient({ projectData, slug }: ProjectPostClie
               <p className="text-sm mt-1">Title: <span className="text-white">{projectData.title}</span></p>
               <p className="text-sm mt-1">Date: <span className="text-white">{new Date(projectData.date).toLocaleDateString()}</span></p>
               <p className="text-sm mt-1 mb-2">Description: <span className="text-white">{projectData.description}</span></p>
-              <Link href={`https://www.github.com/wallscreet/${projectData.repo}`} className="text-blue-500">Open on GitHub</Link>
+              <Link href={`https://www.github.com/wallscreet/${projectData.repo}`} className="text-blue-500 text-sm">(( Open on GitHub ))</Link>
             </div>
           </div>
         </div>
