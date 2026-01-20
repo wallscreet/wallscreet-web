@@ -1,6 +1,33 @@
+"use client"
+
 import Navigation from '@/components/Navigation';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [lastUpdated, setLastUpdated] = useState('Loading...');
+
+  useEffect(() => {
+    async function fetchLastUpdate() {
+      const repo = 'wallscreet/wallscreet-web';
+      try {
+        const response = await fetch(`https://api.github.com/repos/${repo}/commits?per_page=1`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch');
+        }
+        const data = await response.json();
+        if (data && data.length > 0) {
+          const date = new Date(data[0].commit.author.date);
+          setLastUpdated(`Last updated: ${date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}`);
+        } else {
+          setLastUpdated('Last updated: Unknown');
+        }
+      } catch (error) {
+        setLastUpdated('Last updated: Unknown');
+      }
+    }
+    fetchLastUpdate();
+  }, []);
+
   return (
     <div className="min-h-screen bg-black text-green-500 font-mono p-8">
       <div className="max-w-4xl mx-auto">
@@ -102,7 +129,7 @@ export default function Home() {
         </div>
 
         <p className="text-sm col-2 text-green-400 text-center">
-            $ echo "Last updated: $(date)"
+          $ echo "{lastUpdated}"
         </p>
 
       </div>
