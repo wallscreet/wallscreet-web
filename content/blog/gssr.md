@@ -15,10 +15,10 @@ author: "@wallscreet"
 
 Most neural systems operate as passive function approximators mapping inputs to outputs through layers of nonlinear transformations. Even sequence models and transformers, while temporally aware, typically process information without an explicit notion of _state_ or _goal-directed inference_.
 
-In complex environments such as financial systems, decision pipelines, or dynamic simulations, this limitation becomes apparent: real-world reasoning depends on an evolving _internal state_ and the capacity to adjust that state in pursuit of desired outcomes.
+In complex environments such as financial systems, decision pipelines, or dynamic simulations, this limitation becomes apparent. Real-world reasoning depends on an evolving _internal state_ and the capacity to adjust that state in pursuit of desired outcomes.
 
 The **Goal-Conditioned State Space Reasoner (GSSR)** is a conceptual framework designed to address that gap.  
-It blends ideas from state-space modeling, control theory, reinforcement learning, and active inference to create a system that doesn’t just _predict_ the future, it _steers_ its internal model of it.
+It blends ideas from state-space modeling, control theory, reinforcement learning, and active inference to create a system that doesn’t just _predict_ the future, it is built to _steer_ its internal model of it.
 
 ---
 
@@ -40,31 +40,23 @@ The GSSR can be broken into five major components:
 
 |  Component - Description  |
 
-- **Latent State (sₜ)** - The system’s current internal understanding of the environment or task.
-- **Transition Function (fₜₕₑₜₐ)** - Predicts how the state evolves given inputs and perturbations.
-- **Perturber (hₚₛᵢ)** - Learns to adjust or “steer” the state toward goals or to reduce uncertainty.
-- **Goal Representation (gₜ)** - Defines desirable regions of the state space (targets, equilibria, attractors).
-- **Decoder (gₚₕᵢ)** - Translates latent states back into measurable predictions, observations, or values.
-
-The forward update rule:
-
-st+1=fθ(st+δt,ut)s_{t+1} = f_\theta(s_t + \delta_t, u_t)st+1​=fθ​(st​+δt​,ut​) δt=hψ(st,gt)\delta_t = h_\psi(s_t, g_t)δt​=hψ​(st​,gt​)
-
-Where utu_tut​ are observed features, sts_tst​ is the current latent state, and gtg_tgt​ encodes a goal or desired configuration.
+- **Latent State** - The system’s current internal understanding of the environment or task.
+- **Transition Function** - Predicts how the state evolves given inputs and perturbations.
+- **Perturber** - Learns to adjust or “steer” the state toward goals or to reduce uncertainty.
+- **Goal Representation** - Defines desirable regions of the state space (targets, equilibria, attractors).
+- **Decoder** - Translates latent states back into measurable predictions, observations, or values.
 
 ---
 
 ## **4. Learning Objectives**
 
-The GSSR is trained to minimize a composite objective function:
+The GSSR should be trained to minimize a composite objective function.
 
-Ltotal=Lpred+λ1Lgoal+λ2Lentropy\mathcal{L}_{total} = \mathcal{L}_{pred} + \lambda_1 \mathcal{L}_{goal} + \lambda_2 \mathcal{L}_{entropy}Ltotal​=Lpred​+λ1​Lgoal​+λ2​Lentropy​
+- **Prediction Loss** – encourages accurate modeling of state transitions or observations.
 
-- **Prediction Loss ( Lpred\mathcal{L}_{pred}Lpred​ )** – encourages accurate modeling of state transitions or observations.
+- **Goal Alignment Loss** – minimizes deviation from desired state(s).
 
-- **Goal Alignment Loss ( Lgoal\mathcal{L}_{goal}Lgoal​ )** – minimizes deviation from desired state(s): ∥st−st∗∥2\| s_t - s^*_t \|^2∥st​−st∗​∥2.
-
-- **Entropy or Exploration Loss ( Lentropy\mathcal{L}_{entropy}Lentropy​ )** – keeps the perturber’s actions diverse and information-seeking.
+- **Entropy or Exploration Loss** – keeps the perturber’s actions diverse and information-seeking.
 
 This multi-objective setup allows the system to **balance exploitation and exploration**, learning not just what is true, but what is _useful to know next_.
 
@@ -135,7 +127,8 @@ Each of these could yield a new way to connect predictive learning, reasoning, a
 
 ## **9. Discussion**
 
-The GSSR idea pushes neural networks closer to systems that can **act within their own model of the world**, rather than just fitting observed data.  
+The GSSR idea pushes neural networks closer to systems that can **act within their own model of the world**, rather than just fitting observed data.
+  
 It emphasizes _internal agency_ to create a model that doesn’t wait for the next input, but proactively seeks to improve its understanding or reach its goals.
 
 This may be particularly valuable for real-world business and operational systems, where environments change, data streams evolve, and purely reactive models struggle to stay aligned with strategic objectives.
