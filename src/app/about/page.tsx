@@ -19,6 +19,8 @@ export default function About() {
               <p className="ml-4 whitespace-pre-line">
 {
 `Freelance full-stack with a focus on AI systems integrations and business intelligence. I have experience writing custom context tools and developing agentic systems.
+
+I am also working on a hypothesis that test-time adaptation of hybrid State Space Models (SSMs) can be effectively achieved through goal-conditioned perturbations applied to recurrent latent states during inference. This approach could enable dynamic steering of model outputs toward desired behaviors without updating model parameters, thereby demonstrating a lightweight form of test-time fine-tuning that preserves training stability while enhancing adaptability to specific tasks or domains.
 `}
               </p>
             </div>
@@ -73,7 +75,7 @@ export default function About() {
         <div className="border border-white rounded p-6 mb-6">
           <h2 className="text-xl mb-4 text-green-300">$ cat ~/.philosophy</h2>
           <p className="ml-4 whitespace-pre-line">
-{`"Less is more. I use Arch, btw.
+{`Less is more. I use Arch, btw.
 
 - Clarity over cleverness
 - Simplifying complexity
