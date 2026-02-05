@@ -53,7 +53,7 @@ export default function Home() {
           <p className="mb-4 text-green-300">$ whoami</p>
           <p className="ml-4 mb-4">John@wallscreet: ex-banker (20yrs), freelance data analyst and programmer specializing in ai integrations and systems development.</p>
           <p className="mb-4 text-green-300">$ cat /etc/motd</p>
-          <p className="ml-4">Hello 👋 I'm John, this timeline's primary causal observer keeping a close eye on the evolution of the machines. I strongly believe that AGI is hiding in latent space. Welcome to my personal site and blog. All opinions are my own.</p>
+          <p className="ml-4">Hello 👋 I'm John, this timeline's primary causal observer keeping a close eye on the evolution of the machines while actively searching for AGI in latent space. Welcome to my personal site and blog. All opinions are my own.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
