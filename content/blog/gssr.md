@@ -100,7 +100,7 @@ Unlike conventional architectures, the GSSR does not need external supervision f
     Use latent perturbations to anticipate failures or optimize control policies without exhaustive simulation.
 
 - **Adaptive Planning and Simulation**  
-    In dynamic environments, reason through counterfactuals — “If I shift my internal model in this direction, does it bring me closer to my target?”
+    In dynamic environments, reason through counterfactuals. “If I shift my internal model in this direction, does it bring me closer to my target?”
 
 - **Research and Science Systems**  
     Use latent perturbations as a mechanism for automated hypothesis refinement within complex dynamical models.
