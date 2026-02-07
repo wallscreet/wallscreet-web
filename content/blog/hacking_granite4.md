@@ -1,6 +1,6 @@
 ---
 title: "Hacking Granite-4.0 Hybrid"
-date: "2026-2-5"
+date: "2026-02-01"
 description: "As a first step toward goal-conditioned latent steering (part of my research into GSSR), I hacked on IBM's Granite-4.0 hybrid model (Mamba-2 + attention), located the recurrent SSM states in the late layers, and perturbed them mid-generation with a simple random nudge. The output changed immediately from clean answers to repetition lock-in or foreign-code gibberish at higher strength."
 author: "@wallscreet"
 ---
