@@ -1,11 +1,11 @@
 ---
-title: "Building a GSSR Goal State"
+title: "Building a Bayesian GSSR Goal State"
 date: "2026-02-05"
 description: "Continuing the work from Hacking Granite-4.0-Hybrid, this write-up talks through the process of creating and conditioning the goal state to apply to a hybrid transformer-ssm model to steer model outputs in pusuit of a viable test-time fine-tuning strategy."
 author: "@wallscreet"
 ---
 
-# Building a GSSR Goal State
+# Building a Bayesian GSSR Goal State
 
 ## `LBS.__init__`: The Foundation
 
